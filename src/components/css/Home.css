@@ -1,51 +1,78 @@
+.fondoPrincipal {
+  /* background-image: url('../public/image/fondo.jpg'); */
+  background: url("/image/fondo.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.fondoPrincipal{
-    /* background-image: url('../public/image/fondo.jpg'); */
-    background: url("../public/image/fondo.jpg") center no-repeat;
-    background-size: cover;
-    width: 600px;
-    height: 400px;
+.contenedor p {
+  color: #fff;
+  font-size: 24px;
+  display: block;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.tamanioCarrusel{
+  width: 50%;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.colorFondo{
+  background-color: darkslategrey;
+}
+
+@media (min-width: 775px) {
+  .d-25 {
+    width: 25%;
   }
-  
-  
-  
-  
-  .contenedor {
-    width: 50%;
-    margin: 150px auto auto auto;
-    padding: 50px 10px;
-    background: #3f2844;
-    opacity: 0.8;
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-    grid-template-columns: 296px 75px 296px;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas:
-      "img1 versus img2"
-      "nombre versus nombre2";
+
+  .d-75 {
+    width: 75%;
   }
-  #img1 {
-    grid-area: img1;
-  }
-  #versus {
-    grid-area: versus;
-    padding: 40px 0;
-  }
-  #img2 {
-    grid-area: img2;
-  }
-  
-  #nombre {
-    grid-area: nombre;
-  }
-  #nombre2 {
-    grid-area: nombre2;
-  }
-  .contenedor p {
-    color: #fff;
-    font-size: 24px;
-    display: block;
-  }
-  
+}
+
+.contenedorCarrusel2 {
+  width: 100%;
+  padding: 50px 10px;
+  background: #3f2844;
+  opacity: 0.8;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 296px 75px 296px;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "img3 versus img4"
+    "nombre3 versus nombre4";
+}
+
+.contenedorPV{
+  display: flex;
+  flex-direction: column;
+}

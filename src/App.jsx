@@ -1,5 +1,6 @@
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
+import NavBar from './components/pages/NavBar'
+import Footer from './components/pages/Footer'
+import Home from './components/pages/Home'
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
          <NavBar/>
       </header>
       <main>
-
+        
+        <Home/>
       </main>
       <footer>
         <Footer/>
