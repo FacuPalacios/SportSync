@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './css/ResultadosDestacados.css'
+import './css/ResultadosArgentina.css'
 
-const ResultadosDestacados = () => {
+const ResultadosArgentina = () => {
     const API = import.meta.env.VITE_API;
     const KEY = import.meta.env.VITE_KEY;
 
@@ -12,10 +12,11 @@ const ResultadosDestacados = () => {
     useEffect(() => {
         const getEquipos = async () => {
             try {
-                const idEquipo1 = Math.floor(Math.random() * 3000) + 1;
-                let idEquipo2 = Math.floor(Math.random() * 3000) + 1;
+                const idEquipo1 = Math.floor(Math.random() * (1008 - 879 + 1)) + 879;
+                //Después tengo que hacer con la PRUEBA para incluir equipos Arg en Libertadores
+                let idEquipo2 = Math.floor(Math.random() * (1008 - 879 + 1)) + 879;
                 while (idEquipo2 === idEquipo1) {
-                    idEquipo2 = Math.floor(Math.random() * 3000) + 1;
+                    idEquipo2 = Math.floor(Math.random() * (1008 - 879 + 1)) + 879;
                 }
 
                 let URL1 = `${API}/?&met=Teams&teamId=${idEquipo1}&APIkey=${KEY}`;
@@ -38,6 +39,32 @@ const ResultadosDestacados = () => {
         return <div>Error. Recargue la página</div>;
     }
 
+
+    // PRUEBA INCLUIR LIGA ARG + EQUIPOS LIBERTADORES
+    const generarNumeroRandom = () => {
+        //const numerosRango = [879, 880, 881, /* ... hasta ... */ 1008];
+        /* OTRA FORMA DE HACER numerosRango:
+        const numerosRango = [];
+        const inicio = 879;
+        const fin = 1008;
+        for (let i = inicio; i <= fin; i++) {
+            numerosRango.push(i);
+        }*/
+        const numerosRango = Array.from({ length: 1008 - 879 + 1 }, (_, index) => 879 + index);
+        const numerosExtras = [405, 517];
+
+        // Concatenar los números del rango y los números extras
+        const todosLosNumeros = [...numerosRango, ...numerosExtras];
+
+        // Elegir aleatoriamente un número del array combinado
+        const numeroAleatorio = todosLosNumeros[Math.floor(Math.random() * todosLosNumeros.length)];
+        
+        return numeroAleatorio;
+    };
+
+    const numeroRandom = generarNumeroRandom();
+
+
     return (
         <div className='contenedor'>
             {/* Equipo 1 */}
@@ -57,4 +84,4 @@ const ResultadosDestacados = () => {
     );
 };
 
-export default ResultadosDestacados;
+export default ResultadosArgentina;

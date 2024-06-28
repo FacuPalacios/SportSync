@@ -1,0 +1,16 @@
+.contenedor {
+    width: 100%;
+    /* margin: 150px auto auto auto; */
+    padding: 50px 10px;
+    background: #3f2844;
+    opacity: 0.8;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 296px 75px 296px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "equipo1.team_logo versus equipo2.team_logo"
+        "equipo1.team_name versus equipo2.team_name";
+}
