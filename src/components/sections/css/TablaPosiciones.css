@@ -1,0 +1,52 @@
+.imagenEquipo img{
+    height: 10%;
+    width: 10%;
+    margin-right: 15px;
+}
+
+.imagenLiga img{
+    height: 25%;
+    width: 25%;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.custom-table tbody tr:nth-child(odd) {
+    background-color: rgb(173, 171, 171);
+}
+.custom-table th,
+.custom-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.custom-th {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.custom-table th, .custom-table td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.custom-table tbody {
+    text-align: center;
+}
+.custom-table tbody .custom-td {
+    text-align: left;
+}
+
+.bg-green {
+    background-color: #4CAF50;
+    /*color: white; */
+}
+
+.bg-red {
+    background-color: #FF6347;
+    /*color: white;*/
+}

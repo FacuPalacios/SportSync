@@ -5,41 +5,11 @@ import marcador from "../../../public/image/6.jpg"
 import '../css/Home.css'
 import ResultadosDestacados from '../sections/ResultadosDestacados';
 import ResultadosArgentina from '../sections/ResultadosArgentina';
+import TablaPosiciones from '../sections/TablaPosiciones';
 
 const Home = () => {
     const API = import.meta.env.VITE_API;
     const KEY = import.meta.env.VITE_KEY;
-
-    /*const [equipo1, setEquipo1] = useState({});
-    const [equipo2, setEquipo2] = useState({});
-
-    useEffect(() => {
-        const getEquipos = async () => {
-            try {
-                const idEquipo1 = 1000;
-                let idEquipo2 = 19999;
-                while (idEquipo2 === idEquipo1) {
-                    idEquipo2 = Math.floor(Math.random() * 3000) + 1;
-                }
-
-                let URL1 = `${API}/?&met=Teams&teamId=${idEquipo1}&APIkey=${KEY}`;
-                let URL2 = `${API}/?&met=Teams&teamId=${idEquipo2}&APIkey=${KEY}`;
-
-                const respuesta1 = await axios.get(URL1);
-                const respuesta2 = await axios.get(URL2);
-
-                setEquipo1(respuesta1.data);
-                setEquipo2(respuesta2.data);
-
-                console.log("equipo1: ", equipo1);
-                console.log("equipo2: ", equipo2);
-            } catch (error) {
-                console.error("ERROR ---> ", error);
-            }
-        };
-
-        getEquipos();
-    }, []);*/
 
     return (
         <>
@@ -91,6 +61,9 @@ const Home = () => {
             </div>
             <div>
                 <ResultadosArgentina />
+            </div>
+            <div>
+                <TablaPosiciones />
             </div>
         </>
     );
