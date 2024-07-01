@@ -37,7 +37,9 @@ const TablaPosiciones = () => {
     return (
         <div className='container'>
             <img src={logo.result[0].league_logo} alt={logo.result[0].league_name} />
-            <p>{logo.result[0].league_name}</p>
+            <p>Liga: {logo.result[0].league_name}</p>
+            <img src={logo.result[0].country_logo} alt={logo.result[0].country_name} />
+            <p>País: {logo.result[0].country_name}</p>
             {/* <Table striped bordered hover className="custom-table"> */}
             {/* Sin la tabla de React puedo darle color aparte a la tabla */}
             <table className="custom-table">

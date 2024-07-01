@@ -6,6 +6,7 @@ import '../css/Home.css'
 import ResultadosDestacados from '../sections/ResultadosDestacados';
 import ResultadosArgentina from '../sections/ResultadosArgentina';
 import TablaPosiciones from '../sections/TablaPosiciones';
+import Goleadores from '../sections/Goleadores';
 
 const Home = () => {
     const API = import.meta.env.VITE_API;
@@ -62,8 +63,11 @@ const Home = () => {
             <div>
                 <ResultadosArgentina />
             </div>
-            <div>
+            <div className='my-3'>
                 <TablaPosiciones />
+            </div>
+            <div className='my-3'>
+                <Goleadores />
             </div>
         </>
     );
