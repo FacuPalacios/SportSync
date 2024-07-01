@@ -1,0 +1,32 @@
+.calendario {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.partido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.equipo {
+    display: flex;
+    align-items: center;
+}
+
+.equipo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.resultado {
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+}
